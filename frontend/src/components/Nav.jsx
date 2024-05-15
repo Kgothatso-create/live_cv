@@ -116,93 +116,92 @@ const Nav = () => {
       </div>
       {/* laptop nav */}
       <div className="container-fluid d-flex justify-content-center align-items-center d-md-block d-none">
-        {navScroll && (
-          <nav className="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
-            <div className="container-fluid">
-              <a className="navbar-brand" href="#">
-                Navbar
-              </a>
-              <div className="collapse navbar-collapse" id="navbarColor02">
-                <ul className="navbar-nav me-auto">
-                  <li className="nav-item">
-                    <a className="nav-link active" href="#">
-                      <i className="fa-solid fa-house icon"></i>
-                      Home
-                    </a>
-                  </li>
-                  <li className="nav-item">
-                    <a className="nav-link active" href="#">
-                      <i className="fa-solid fa-helmet-safety icon"></i>
-                      Projects
-                    </a>
-                  </li>
-                  <li className="nav-item">
-                    <a className="nav-link active" href="#">
-                      <i className="fa-solid fa-building icon"></i>
-                      Experience
-                    </a>
-                  </li>
-                  <li className="nav-item">
-                    <a className="nav-link active" href="#">
-                      <i className="fa-solid fa-gears icon"></i>
-                      Self Development
-                    </a>
-                  </li>
-                  <li className="nav-item">
-                    <a className="nav-link active" href="#">
-                      <i className="fa-solid fa-book-open icon"></i>
-                      Education
-                    </a>
-                  </li>
-                  <li className="nav-item">
-                    <a className="nav-link active" href="#">
-                      <i className="fa-solid fa-user icon"></i>
-                      About K.P
-                    </a>
-                  </li>
-                </ul>
-              </div>
+        <nav
+          className={`navbar navbar-expand-lg bg-dark ${
+            navScroll ? "fade-in" : "d-none"
+          }`}
+          data-bs-theme="dark"
+        >
+          <div className="container-fluid">
+            <a className="navbar-brand" href="#">
+              Navbar
+            </a>
+            <div className="collapse navbar-collapse" id="navbarColor02">
+              <ul className="navbar-nav me-auto">
+                <li className="nav-item">
+                  <a className="nav-link active" href="#">
+                    <i className="fa-solid fa-house icon"></i>
+                    Home
+                  </a>
+                </li>
+                <li className="nav-item">
+                  <a className="nav-link active" href="#">
+                    <i className="fa-solid fa-helmet-safety icon"></i>
+                    Projects
+                  </a>
+                </li>
+                <li className="nav-item">
+                  <a className="nav-link active" href="#">
+                    <i className="fa-solid fa-building icon"></i>
+                    Experience
+                  </a>
+                </li>
+                <li className="nav-item">
+                  <a className="nav-link active" href="#">
+                    <i className="fa-solid fa-gears icon"></i>
+                    Self Development
+                  </a>
+                </li>
+                <li className="nav-item">
+                  <a className="nav-link active" href="#">
+                    <i className="fa-solid fa-book-open icon"></i>
+                    Education
+                  </a>
+                </li>
+                <li className="nav-item">
+                  <a className="nav-link active" href="#">
+                    <i className="fa-solid fa-user icon"></i>
+                    About K.P
+                  </a>
+                </li>
+              </ul>
             </div>
-          </nav>
-        )}
-        {!navScroll && (
-          <div>
-            <ul
-              className={`floating-nav ${navScroll ? "slide-up" : "roll-down"}`}
-            >
-              <li>
-                <a href="#">
-                  <i className="fa-solid fa-house list-icon"></i>
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <i className="fa-solid fa-helmet-safety list-icon"></i>
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <i className="fa-solid fa-building list-icon"></i>
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <i className="fa-solid fa-gears list-icon"></i>
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <i className="fa-solid fa-book-open list-icon"></i>
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <i className="fa-solid fa-user list-icon"></i>
-                </a>
-              </li>
-            </ul>
           </div>
-        )}
+        </nav>
+        <div>
+          <ul className={`floating-nav ${navScroll ? "d-none" : "roll-down"}`}>
+            <li>
+              <a href="#">
+                <i className="fa-solid fa-house list-icon"></i>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <i className="fa-solid fa-helmet-safety list-icon"></i>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <i className="fa-solid fa-building list-icon"></i>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <i className="fa-solid fa-gears list-icon"></i>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <i className="fa-solid fa-book-open list-icon"></i>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <i className="fa-solid fa-user list-icon"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
   );
